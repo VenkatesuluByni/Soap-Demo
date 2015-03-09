@@ -1,0 +1,13 @@
+<?xml version = "1.0"?>
+<project name="testprg" default ="runSOAPUISuite">
+<property name="service.endpoint" value="http://eeukrp0055-soa.eead.eeint.co.uk:11370/CrmPaymSignalBox_1_0/SignalBox"/>
+<target name="runSOAPUISuite">
+<exec executable="C:\Program Files\SmartBear\soapUI-Pro-4.5.2\bin\testrunner.bat" failonerror="yes" failifexecutionfails="yes">
+ <arg value="-e ${service.endpoint}"/>
+ <arg value="-F PDF"/>
+ <arg value="-f C:\Documents and Settings\XPMUser\Desktop\Actual sample"/>
+ <arg value="-R Project Report"/>
+ <arg path="C:\Documents and Settings\XPMUser\Desktop\Actual sample\SignalBox-soapui-project.xml"/>
+</exec>
+</target>
+</project>
